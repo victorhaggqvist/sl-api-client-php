@@ -25,6 +25,7 @@ class Client {
 
 
     /**
+     * A Guzzle Client
      * @var \GuzzleHttp\Client
      */
     private $client;
@@ -47,6 +48,12 @@ class Client {
      */
     private $slPlatsuppslagKey;
 
+    /**
+     * Constructor for SL Client
+     * @param string $slRealtidsinformation3 Key Api key for SL Realtidsinformation 3
+     * @param string $slReseplanerare2key Api key for SL Reseplanerare 2
+     * @param string $slPlatsuppslagKey Api key for SL Platsuppslag
+     */
     function __construct($slRealtidsinformation3Key, $slReseplanerare2key = null, $slPlatsuppslagKey = null) {
         $this->client = new \GuzzleHttp\Client();
         $this->slRealtidsinformation3Key = $slRealtidsinformation3Key;
@@ -56,7 +63,9 @@ class Client {
 
     /**
      * SL Platsuppslag
-     * @see https://www.trafiklab.se/api/sl-platsuppslag
+     *
+     * See https://www.trafiklab.se/api/sl-platsuppslag
+     *
      * @param string $query
      * @param array $options
      * @return mixed
@@ -75,7 +84,9 @@ class Client {
 
     /**
      * SL Reseplanerare 2 -> Trip
-     * @see https://www.trafiklab.se/api/sl-reseplanerare-2
+     *
+     * See https://www.trafiklab.se/api/sl-reseplanerare-2
+     *
      * @param string $originId SiteID from
      * @param string $destId SiteID to
      * @param array $options Any extra options
@@ -101,7 +112,9 @@ class Client {
 
     /**
      * SL Reseplanerare 2 -> Geometry
-     * @see https://www.trafiklab.se/api/sl-reseplanerare-2
+     *
+     * See https://www.trafiklab.se/api/sl-reseplanerare-2
+     *
      * @param string $ref
      * @return mixed
      */
@@ -123,7 +136,9 @@ class Client {
 
     /**
      * SL Reseplanerare 2 -> JourneyDetail
-     * @see https://www.trafiklab.se/api/sl-reseplanerare-2
+     *
+     * See https://www.trafiklab.se/api/sl-reseplanerare-2
+     * 
      * @param string $ref
      * @return mixed
      */
