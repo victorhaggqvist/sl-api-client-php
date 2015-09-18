@@ -19,6 +19,8 @@ With composer
     $response = $client->slPlatsuppslag('Slussen'):
     
 For a more detailed sample have a look at the test.
+
+Also see the [api docs](https://victorhaggqvist.github.io/sl-api-client-php/classes/Snilius.SL.Client.html).
     
 ## License
 
