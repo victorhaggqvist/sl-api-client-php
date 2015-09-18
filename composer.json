@@ -16,5 +16,11 @@
     ],
     "autoload": {
         "psr-4": {"Snilius\\": "src/"}
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/victorhaggqvist/sl-api-client-php"
+        }
+    ]
 }
