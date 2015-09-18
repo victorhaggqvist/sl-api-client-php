@@ -1,5 +1,5 @@
 {
-    "name": "snilius/sl-client",
+    "name": "snilius/sl-api-client",
     "description": "A SL api wrapper",
     "require": {
         "guzzlehttp/guzzle": "^6.1"
