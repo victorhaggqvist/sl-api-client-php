@@ -2,7 +2,9 @@
     "name": "snilius/sl-api-client",
     "description": "A SL api wrapper",
     "require": {
-        "guzzlehttp/guzzle": "^6.1",
+        "guzzlehttp/guzzle": "^6.1"
+    },
+    "require-dev": {
         "phpdocumentor/phpdocumentor": "^2.8"
     },
     "license": "MIT",
