@@ -5,7 +5,7 @@
  * Time: 12:21 AM
  */
 
-namespace Snilius\Bundle\SLBundle\Client;
+namespace Snilius\SL;
 
 
 /**
@@ -25,7 +25,7 @@ class Client {
 
 
     /**
-     * @var \Guzzle\Http\Client
+     * @var \GuzzleHttp\Client
      */
     private $client;
 
@@ -48,7 +48,7 @@ class Client {
     private $slPlatsuppslagKey;
 
     function __construct($slRealtidsinformation3Key, $slReseplanerare2key = null, $slPlatsuppslagKey = null) {
-        $this->client = new \Guzzle\Http\Client();
+        $this->client = new \GuzzleHttp\Client();
         $this->slRealtidsinformation3Key = $slRealtidsinformation3Key;
         $this->slReseplanerare2key = $slReseplanerare2key;
         $this->slPlatsuppslagKey = $slPlatsuppslagKey;
@@ -65,11 +65,11 @@ class Client {
         $params = ['key' => $this->slPlatsuppslagKey, 'searchstring' => $query];
         $params = array_merge($params, $options);
 
-        $request = $this->client->createRequest('GET', $this->SlPlatsuppslagURL, null, null, [
+        $request = $this->client->request('GET', $this->SlPlatsuppslagURL, [
             'query' => $params
         ]);
 
-        $resp = $request->send();
+        $resp = $this->client->send($request);
         $json = json_decode($resp->getBody(), true);
         return $json['ResponseData'];
     }
@@ -92,11 +92,11 @@ class Client {
 
         $url = $this->SlReseplanerare2URL.'/trip.json';
 
-        $request = $this->client->createRequest('GET', $url, null, null, [
+        $request = $this->client->request('GET', $url, [
             'query' => $params
         ]);
 
-        $resp = $request->send();
+        $resp = $this->client->send($request);
         $json = json_decode($resp->getBody(), true);
         return $json;
     }
@@ -115,11 +115,11 @@ class Client {
             'ref' => $ref
         ];
 
-        $request = $this->client->createRequest('GET', $url, null, null, [
+        $request = $this->client->request('GET', $url, [
             'query' => $params
         ]);
 
-        $resp = $request->send();
+        $resp = $this->client->send($request);
         $json = json_decode($resp->getBody(), true);
         return $json;
     }
@@ -138,11 +138,11 @@ class Client {
             'ref' => $ref
         ];
 
-        $request = $this->client->createRequest('GET', $url, null, null, [
+        $request = $this->client->request('GET', $url, [
             'query' => $params
         ]);
 
-        $resp = $request->send();
+        $resp = $this->client->send($request);
         $json = json_decode($resp->getBody(), true);
         return $json;
     }
