@@ -9,18 +9,26 @@ namespace Snilius\SL;
 
 
 /**
- * Wrapper for SL apis provided through Trafiklab
+ * Wrapper for SL apis provided through Trafiklab.se
  *
  * This wrapper covers;
  * - https://www.trafiklab.se/api/sl-reseplanerare-2
  * - https://www.trafiklab.se/api/sl-platsuppslag
  *
- * Class Client
- * @package Snilius\Bundle\SLBundle\Client
+ * @link https://github.com/victorhaggqvist/sl-api-client-php
  */
 class Client {
 
+    /**
+     * Sl Platsuppslag URL endpoint
+     * @var string
+     */
     private $SlPlatsuppslagURL = 'https://api.sl.se/api2/typeahead.json';
+
+    /**
+     * Sl Reseplanerare 2 URL base endpoint
+     * @var string
+     */
     private $SlReseplanerare2URL = 'https://api.sl.se/api2/TravelplannerV2';
 
 
@@ -66,6 +74,7 @@ class Client {
      *
      * See https://www.trafiklab.se/api/sl-platsuppslag
      *
+     * @link https://www.trafiklab.se/api/sl-platsuppslag
      * @param string $query
      * @param array $options
      * @return mixed
@@ -87,6 +96,7 @@ class Client {
      *
      * See https://www.trafiklab.se/api/sl-reseplanerare-2
      *
+     * @link https://www.trafiklab.se/api/sl-reseplanerare-2
      * @param string $originId SiteID from
      * @param string $destId SiteID to
      * @param array $options Any extra options
@@ -115,6 +125,7 @@ class Client {
      *
      * See https://www.trafiklab.se/api/sl-reseplanerare-2
      *
+     * @link https://www.trafiklab.se/api/sl-reseplanerare-2
      * @param string $ref
      * @return mixed
      */
@@ -138,7 +149,8 @@ class Client {
      * SL Reseplanerare 2 -> JourneyDetail
      *
      * See https://www.trafiklab.se/api/sl-reseplanerare-2
-     * 
+     *
+     * @link https://www.trafiklab.se/api/sl-reseplanerare-2
      * @param string $ref
      * @return mixed
      */
