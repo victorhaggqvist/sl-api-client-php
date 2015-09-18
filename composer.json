@@ -1,0 +1,17 @@
+{
+    "name": "snilius/sl-client",
+    "description": "A SL api wrapper",
+    "require": {
+        "guzzlehttp/guzzle": "^6.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Victor Häggqvist",
+            "email": "victor@snilius.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Snilius\\": "src/"}
+    }
+}
