@@ -69,8 +69,7 @@ class Client {
             'query' => $params
         ]);
 
-        $resp = $this->client->send($request);
-        $json = json_decode($resp->getBody(), true);
+        $json = json_decode($request->getBody(), true);
         return $json['ResponseData'];
     }
 
@@ -96,8 +95,7 @@ class Client {
             'query' => $params
         ]);
 
-        $resp = $this->client->send($request);
-        $json = json_decode($resp->getBody(), true);
+        $json = json_decode($request->getBody(), true);
         return $json;
     }
 
@@ -119,8 +117,7 @@ class Client {
             'query' => $params
         ]);
 
-        $resp = $this->client->send($request);
-        $json = json_decode($resp->getBody(), true);
+        $json = json_decode($request->getBody(), true);
         return $json;
     }
 
