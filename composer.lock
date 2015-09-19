@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "1f5e6242702b067bf3790a98c2b185fc",
+    "content-hash": "5bd8d5cacfbc2f371eb47d1d784b9217",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -494,7 +495,7 @@
                 "parser"
             ],
             "time": "2014-09-09 13:34:57"
-        },curl -s http://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
+        },
         {
             "name": "erusev/parsedown",
             "version": "1.5.4",
